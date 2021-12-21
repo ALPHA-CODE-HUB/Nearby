@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Client.PostingFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/reqpst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Request Posting"
+            android:textColor="@color/blue"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="left"
+            android:text="Enter Some Details"
+
+
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+
+            android:layout_marginTop="110dp"
+            android:background="@drawable/shape2"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="left"
+            android:hint="Enter Service Request"
+            android:paddingTop="5dp"
+            android:paddingStart="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/shape2"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="start"
+            android:hint="Describe your problem"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="170dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Mention your problem"
+            android:textSize="16dp"
+            android:textStyle="bold"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="360dp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape2"
+            android:hint="Services" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="420dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Select difficulty Level"
+            android:textSize="16dp"
+            android:textStyle="bold"
+
+            />
+
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape2"
+            android:layout_marginTop="450dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginTop="310dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Confirm"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

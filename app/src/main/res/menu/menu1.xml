@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+"/>
+    <item
+        android:id="@+id/request1"
+        android:title="Request"
+        android:icon="@drawable/ic_request_quote_svgrepo_com"/>
+    <item
+        android:id="@+id/review1"
+        android:title="Review"
+        android:icon="@drawable/ic_star_svgrepo_com"/>
+
+
+    <item
+        android:id="@+id/account1"
+        android:title="Account"
+        android:icon="@drawable/ic_account_box_svgrepo_com"/>
+    <item android:id="@+id/chat1"
+        android:title="Chat"
+        android:icon="@drawable/ic_chat_svgrepo_com"/>
+</menu>
