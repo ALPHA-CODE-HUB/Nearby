@@ -13,11 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.nearby.Client.MainActivity;
-import com.example.nearby.Client.accountFragment;
-import com.example.nearby.Client.categoryFragment;
-import com.example.nearby.Client.chatFragment;
-import com.example.nearby.Client.requestFragment;
+import com.example.nearby.Client.ClientHomePage;
 import com.example.nearby.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -44,7 +40,7 @@ public class Serviceprovider extends AppCompatActivity {
 
 
                 } else {
-                    Intent intent = new Intent(Serviceprovider.this, MainActivity.class);
+                    Intent intent = new Intent(Serviceprovider.this, ClientHomePage.class);
                     startActivity(intent);
                     return;
                 }

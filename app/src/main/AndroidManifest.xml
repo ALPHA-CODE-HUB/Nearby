@@ -10,11 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nearby">
         <activity
+            android:name=".Client.ClientHomePage"
+            android:exported="true" />
+        <activity
+            android:name=".Authentication.SignUp"
+            android:exported="false" />
+        <activity
             android:name=".ServiceProvider.Serviceprovider"
             android:exported="true" />
         <activity
-            android:name=".Client.MainActivity"
-            android:exported="true">
+            android:name=".Authentication.LogIn"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

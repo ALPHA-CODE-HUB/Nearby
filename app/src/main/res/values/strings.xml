@@ -14,4 +14,8 @@
         <item>Level C Job</item>
         <item>Level D Job</item>
     </string-array>
+    <string name="Sign_up"><u>Sign up</u></string>
+    <string name="Login"><u>Login</u></string>
+    <string name="dialog_message">Check your mail to verify your account!</string>
+    <string name="dialog_title">Email Verification</string>
 </resources>

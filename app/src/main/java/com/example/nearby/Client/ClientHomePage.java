@@ -7,7 +7,6 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
-import android.widget.GridView;
 import android.widget.Switch;
 
 import androidx.annotation.NonNull;
@@ -18,9 +17,7 @@ import com.example.nearby.R;
 import com.example.nearby.ServiceProvider.Serviceprovider;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.ArrayList;
-
-public class MainActivity extends AppCompatActivity {
+public class ClientHomePage extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     Switch s;
 
@@ -43,7 +40,7 @@ s=findViewById(R.id.sw);
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                  if(s.isChecked())
                  {
-                     Intent intent=new Intent(MainActivity.this, Serviceprovider.class);
+                     Intent intent=new Intent(ClientHomePage.this, Serviceprovider.class);
                      startActivity(intent);
                      return;
 
