@@ -32,7 +32,6 @@ public class requestFragment extends Fragment {
     RecyclerView recyclerView;
 
     public requestFragment() {
-        // Required empty public constructor
     }
 
 
@@ -58,7 +57,7 @@ public class requestFragment extends Fragment {
         FirebaseRecyclerAdapter<RequestBean,ViewHolder_> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<RequestBean, ViewHolder_>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder_ holder, int position, @NonNull RequestBean model) {
-                holder.setItem(getActivity(),model.getServiceRequest(),model.getDesc(),model.getDiff(), model.getDate(),model.getTimestamp() );
+                holder.setItem(getActivity(),model.getServiceRequest(),model.getDesc(),model.getDiff(), model.getDate(),model.getTimestamp(),model.getPin() );
                 holder.delete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

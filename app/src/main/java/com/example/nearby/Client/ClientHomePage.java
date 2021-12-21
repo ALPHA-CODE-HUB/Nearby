@@ -1,13 +1,19 @@
 package com.example.nearby.Client;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +26,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class ClientHomePage extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     Switch s;
+    private EditText pin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +41,22 @@ public class ClientHomePage extends AppCompatActivity {
 
 
 
-s=findViewById(R.id.sw);
+        s = findViewById(R.id.sw);
         s.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                 if(s.isChecked())
-                 {
-                     Intent intent=new Intent(ClientHomePage.this, Serviceprovider.class);
-                     startActivity(intent);
-                     return;
+                if (s.isChecked()) {
+                    Intent intent = new Intent(ClientHomePage.this, Serviceprovider.class);
+                    startActivity(intent);
+                    return;
 
-                 }
+                }
             }
         });
 
         bottomNavigationView = findViewById(R.id.nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
-        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,new categoryFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new categoryFragment()).commit();
     }
 
 
@@ -74,9 +80,10 @@ s=findViewById(R.id.sw);
 
 
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,fragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment).commit();
 
             return true;
         }
     };
+
 }
