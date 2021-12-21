@@ -40,24 +40,25 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginLeft="20dp"
-
+            android:id="@+id/serviceRequest"
             android:layout_marginTop="110dp"
             android:background="@drawable/shape2"
             android:fontFamily="@font/poppins_medium"
             android:gravity="left"
             android:hint="Enter Service Request"
-            android:paddingTop="5dp"
-            android:paddingStart="15dp" />
+            android:paddingStart="15dp"
+            android:paddingTop="5dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="200dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/shape2"
             android:fontFamily="@font/poppins_medium"
             android:gravity="start"
+            android:id="@+id/desc"
             android:hint="Describe your problem"
             android:paddingStart="20dp"
             android:paddingTop="20dp" />
@@ -74,22 +75,11 @@
 
             />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:paddingStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="360dp"
-            android:fontFamily="@font/poppins_medium"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/shape2"
-            android:hint="Services" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="420dp"
+            android:layout_marginTop="360dp"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
             android:text="Select difficulty Level"
@@ -105,8 +95,8 @@
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/shape2"
-            android:layout_marginTop="450dp" />
+            android:layout_marginTop="385dp"
+            android:background="@drawable/shape2" />
 
     </RelativeLayout>
 
@@ -120,12 +110,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="100dp"
-            android:layout_marginTop="310dp"
+            android:layout_marginTop="180dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Confirm"
             android:textColor="@color/white" />
 
 
     </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyleLarge"
+        />
 
 </RelativeLayout>

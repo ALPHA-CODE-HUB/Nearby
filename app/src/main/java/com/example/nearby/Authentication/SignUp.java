@@ -46,7 +46,6 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
         dob = findViewById(R.id.dob);
         logintv = findViewById(R.id.logintv);
         fname = findViewById(R.id.fname);

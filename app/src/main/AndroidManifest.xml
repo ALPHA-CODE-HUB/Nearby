@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nearby">
         <activity
+            android:name=".Authentication.ServiceProvideAuthentication"
+            android:exported="false" />
+        <activity
             android:name=".Client.ClientHomePage"
             android:exported="true" />
         <activity
@@ -20,8 +23,7 @@
             android:exported="true" />
         <activity
             android:name=".Authentication.LogIn"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
