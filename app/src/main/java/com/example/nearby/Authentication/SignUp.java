@@ -46,8 +46,7 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+
         dob = findViewById(R.id.dob);
         logintv = findViewById(R.id.logintv);
         fname = findViewById(R.id.fname);
@@ -90,7 +89,8 @@ public class SignUp extends AppCompatActivity {
         logintv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(SignUp.this, ClientHomePage.class);
+                Intent i = new Intent(SignUp.this, LogIn
+                        .class);
                 startActivity(i);
             }
         });

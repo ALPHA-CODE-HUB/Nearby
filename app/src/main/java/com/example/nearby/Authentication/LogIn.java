@@ -34,9 +34,7 @@ public class LogIn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        setContentView(R.layout.activity_log_in);
         mail=findViewById(R.id.username_input);
         pass=findViewById(R.id.pass);
         btn=findViewById(R.id.loginbtn);
