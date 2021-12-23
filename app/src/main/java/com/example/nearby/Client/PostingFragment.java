@@ -73,6 +73,7 @@ public class PostingFragment extends Fragment {
                 }else{
                     RequestBean rb=new RequestBean(sr,desc,difficulty,date1,timestamp,pin);
                     progressBar.setVisibility(View.VISIBLE);
+                    FirebaseDatabase.getInstance().getReference("Request").child(String.valueOf(pin)).child(String.valueOf(System.currentTimeMillis())).setValue(rb);
                     FirebaseDatabase.getInstance().getReference("Requests").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(String.valueOf(timestamp)).setValue(rb).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

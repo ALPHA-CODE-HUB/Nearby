@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ServiceProvider.RequestFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/location1"
+        android:layout_margin="10dp">
 
-</FrameLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationicon"
+            android:src="@drawable/ic_location_indicator_red_svgrepo_com"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:layout_toRightOf="@id/locationicon"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint="Pincode"
+            android:id="@+id/pin2"
+            android:maxLines="1"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rv1"
+        android:layout_below="@+id/location1"
+        android:paddingTop="10dp"
+        android:layout_margin="3dp"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

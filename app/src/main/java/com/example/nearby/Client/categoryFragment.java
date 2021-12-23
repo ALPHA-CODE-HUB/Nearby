@@ -121,7 +121,6 @@ public class categoryFragment extends Fragment {
 
                 } catch (Exception e) {
                     Toast.makeText(getActivity().getApplication(), "Invalid Pin", Toast.LENGTH_SHORT).show();
-
                 }
 
             }

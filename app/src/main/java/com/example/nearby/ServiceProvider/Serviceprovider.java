@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.nearby.Client.ClientHomePage;
+import com.example.nearby.Client.categoryFragment;
 import com.example.nearby.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -50,6 +51,7 @@ public class Serviceprovider extends AppCompatActivity {
         bottomNavigationView1 = findViewById(R.id.nav1);
         bottomNavigationView1.setOnNavigationItemSelectedListener(bottomnav);
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout1, new RequestFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener bottomnav=new BottomNavigationView.OnNavigationItemSelectedListener() {
