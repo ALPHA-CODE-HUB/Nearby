@@ -30,6 +30,7 @@ import java.util.Date;
 public class PostingFragment extends Fragment {
 
     int pin;
+    String service;
 
     public PostingFragment() {
     }
@@ -53,6 +54,7 @@ public class PostingFragment extends Fragment {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         Bundle bundle=this.getArguments();
         pin=bundle.getInt("pin");
+        service=bundle.getString("service");
 
 
 
@@ -71,7 +73,7 @@ public class PostingFragment extends Fragment {
                 if(desc==null || difficulty==null || sr==null){
                     Toast.makeText(getActivity(),"Fill all fields!",Toast.LENGTH_LONG).show();
                 }else{
-                    RequestBean rb=new RequestBean(sr,desc,difficulty,date1,timestamp,pin);
+                    RequestBean rb=new RequestBean(sr,desc,difficulty,date1,timestamp,pin,service);
                     progressBar.setVisibility(View.VISIBLE);
                     FirebaseDatabase.getInstance().getReference("Request").child(String.valueOf(pin)).child(String.valueOf(System.currentTimeMillis())).setValue(rb);
                     FirebaseDatabase.getInstance().getReference("Requests").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(String.valueOf(timestamp)).setValue(rb).addOnCompleteListener(new OnCompleteListener<Void>() {

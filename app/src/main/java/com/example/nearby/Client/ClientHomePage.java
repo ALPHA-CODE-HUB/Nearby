@@ -47,7 +47,9 @@ public class ClientHomePage extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (s.isChecked()) {
                     Intent intent = new Intent(ClientHomePage.this, Serviceprovider.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
+                    finish();
                     return;
 
                 }

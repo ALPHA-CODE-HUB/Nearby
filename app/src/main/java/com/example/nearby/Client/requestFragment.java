@@ -57,7 +57,7 @@ public class requestFragment extends Fragment {
         FirebaseRecyclerAdapter<RequestBean,ViewHolder_> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<RequestBean, ViewHolder_>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder_ holder, int position, @NonNull RequestBean model) {
-                holder.setItem(getActivity(),model.getServiceRequest(),model.getDesc(),model.getDiff(), model.getDate(),model.getTimestamp(),model.getPin() );
+                holder.setItem(getActivity(),model.getServiceRequest(),model.getDesc(),model.getDiff(), model.getDate(),model.getTimestamp(),model.getPin(),model.getService());
                 holder.delete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

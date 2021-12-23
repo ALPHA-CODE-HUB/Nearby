@@ -42,7 +42,9 @@ public class Serviceprovider extends AppCompatActivity {
 
                 } else {
                     Intent intent = new Intent(Serviceprovider.this, ClientHomePage.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
+                    finish();
                     return;
                 }
             }
