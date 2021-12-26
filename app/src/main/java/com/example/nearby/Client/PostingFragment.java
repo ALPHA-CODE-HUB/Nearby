@@ -24,6 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -73,9 +74,11 @@ public class PostingFragment extends Fragment {
                 if(desc==null || difficulty==null || sr==null){
                     Toast.makeText(getActivity(),"Fill all fields!",Toast.LENGTH_LONG).show();
                 }else{
-                    RequestBean rb=new RequestBean(sr,desc,difficulty,date1,timestamp,pin,service);
+                    ArrayList<String> list=new ArrayList();
+                    list.add("demo");
+                    RequestBean rb=new RequestBean(sr,desc,difficulty,date1,timestamp,pin,service,0, FirebaseAuth.getInstance().getUid(),list);
                     progressBar.setVisibility(View.VISIBLE);
-                    FirebaseDatabase.getInstance().getReference("Request").child(String.valueOf(pin)).child(String.valueOf(System.currentTimeMillis())).setValue(rb);
+                    FirebaseDatabase.getInstance().getReference("Request").child(String.valueOf(pin)).child(String.valueOf(timestamp)).setValue(rb);
                     FirebaseDatabase.getInstance().getReference("Requests").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(String.valueOf(timestamp)).setValue(rb).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.nearby.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -57,13 +58,31 @@ public class requestFragment extends Fragment {
         FirebaseRecyclerAdapter<RequestBean,ViewHolder_> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<RequestBean, ViewHolder_>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder_ holder, int position, @NonNull RequestBean model) {
-                holder.setItem(getActivity(),model.getServiceRequest(),model.getDesc(),model.getDiff(), model.getDate(),model.getTimestamp(),model.getPin(),model.getService());
+                holder.setItem(getActivity(),model.getServiceRequest(),model.getDesc(),model.getDiff(), model.getDate(),model.getTimestamp(),model.getPin(),model.getService(),model.getRequests(),model.getUserId(),model.getList());
                 holder.delete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         DatabaseReference id=FirebaseDatabase.getInstance().getReference("Requests").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(String.valueOf(model.timestamp));
                         id.removeValue();
+                        DatabaseReference di=FirebaseDatabase.getInstance().getReference("Request").child(String.valueOf(model.getPin())).child(String.valueOf(model.getTimestamp()));
+                        di.removeValue();
                     }
+                });
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        if(model.getRequests()>0){
+                            ServiceProviders providers=new ServiceProviders();
+                            Bundle bundle=new Bundle();
+                            bundle.putString("UserId",model.getUserId());
+                            bundle.putString("Timestamp", String.valueOf(model.getTimestamp()));
+                            providers.setArguments(bundle);
+                            getFragmentManager().beginTransaction().replace(R.id.framelayout,providers).commit();
+                        }else{
+                            Toast.makeText(getActivity().getApplication(),"No Requests",Toast.LENGTH_LONG).show();
+                        }
+                        }
                 });
             }
 

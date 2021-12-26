@@ -1,6 +1,7 @@
 package com.example.nearby.ServiceProvider;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -58,7 +59,24 @@ public class RequestFragment extends Fragment {
                                 FirebaseRecyclerAdapter<RequestBean,ViewHolderClass> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<RequestBean, ViewHolderClass>(options) {
                                     @Override
                                     protected void onBindViewHolder(@NonNull ViewHolderClass holder, int position, @NonNull RequestBean model) {
-                                        holder.setItem(getActivity(),model.getServiceRequest(),model.getDesc(),model.getDiff(), model.getDate(),model.getTimestamp(),model.getPin() );
+                                        holder.setItem(getActivity(),model.getServiceRequest(),model.getDesc(),model.getDiff(), model.getDate(),model.getTimestamp(),model.getPin(),model.getRequests(),model.getUserId(), model.getList());
+                                            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View view) {
+                                                    Bundle bundle=new Bundle();
+                                                    bundle.putString("ServiceRequest",model.getServiceRequest());
+                                                    bundle.putString("Description", model.getDesc());
+                                                    bundle.putString("Difficulty",model.getDiff());
+                                                    bundle.putString("Date", model.getDate());
+                                                    bundle.putString("RequestCount",String.valueOf(model.getRequests()));
+                                                    bundle.putString("UserId",model.getUserId());
+                                                    bundle.putString("Timestamp",String.valueOf(model.getTimestamp()));
+                                                    RequestView requestView=new RequestView();
+                                                    requestView.setArguments(bundle);
+                                                    getFragmentManager().beginTransaction().replace(R.id.framelayout1,requestView).commit();
+
+                                                    }
+                                            });
 
                                     }
 

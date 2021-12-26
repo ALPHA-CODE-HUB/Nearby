@@ -1,5 +1,7 @@
 package com.example.nearby.Client;
 
+import java.util.ArrayList;
+
 public class RequestBean {
     public String serviceRequest;
     public String desc;
@@ -8,6 +10,38 @@ public class RequestBean {
     public String service;
     public long timestamp;
     public int pin;
+    public int requests;
+    public String userId;
+    public ArrayList<String> list;
+
+    public ArrayList<String> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<String> list) {
+        this.list = list;
+    }
+
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+
+
+    public int getRequests() {
+        return requests;
+    }
+
+    public void setRequests(int requests) {
+        this.requests = requests;
+    }
+
+
 
     public String getService() {
         return service;
@@ -70,7 +104,7 @@ public class RequestBean {
         this.timestamp = timestamp;
     }
 
-    public RequestBean(String serviceRequest, String desc, String diff, String date, long timestamp,int pin,String service) {
+    public RequestBean(String serviceRequest, String desc, String diff, String date, long timestamp,int pin,String service,int requests,String userId,ArrayList<String> list) {
         this.serviceRequest = serviceRequest;
         this.desc = desc;
         this.diff = diff;
@@ -78,5 +112,8 @@ public class RequestBean {
         this.timestamp=timestamp;
         this.pin=pin;
         this.service=service;
+        this.requests=requests;
+        this.userId=userId;
+        this.list=list;
     }
 }

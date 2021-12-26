@@ -30,20 +30,29 @@
         <entry key="..\:/Nearby/app/src/main/res/values/taskbar.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/drawable/dialoglayout.xml" value="0.1" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/drawable/ic_location_indicator_red_svgrepo_com.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/drawable/taskbar.xml" value="0.1" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/activity_demo.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/activity_home.xml" value="0.2630208333333333" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/activity_log_in.xml" value="0.25885416666666666" />
-        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/activity_main.xml" value="0.2037037037037037" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/activity_service_provide_authentication.xml" value="0.259375" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/activity_serviceprovider.xml" value="0.259375" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/activity_sign_up.xml" value="0.11927083333333334" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/dialoglayout.xml" value="0.13385416666666666" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/fragment_category.xml" value="0.259375" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/fragment_posting.xml" value="0.259375" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/fragment_request.xml" value="0.259375" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/fragment_request2.xml" value="0.259375" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/fragment_request_view.xml" value="0.6" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/fragment_requests_insight.xml" value="0.259375" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/fragment_review.xml" value="0.259375" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/fragment_service_providers.xml" value="0.2453125" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/grid_view_items.xml" value="0.259375" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/itemrv.xml" value="0.4" />
         <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/listview.xml" value="0.14629629629629629" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/layout/listviewserviceproviders.xml" value="0.259375" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/KANNAN/AndroidStudioProjects/Nearby/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round1.xml" value="0.536" />
       </map>
     </option>
   </component>

@@ -49,6 +49,7 @@ public class ClientHomePage extends AppCompatActivity {
                     Intent intent = new Intent(ClientHomePage.this, Serviceprovider.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.nav_default_pop_enter_anim,R.anim.nav_default_pop_exit_anim);
                     finish();
                     return;
 

@@ -44,6 +44,7 @@ public class Serviceprovider extends AppCompatActivity {
                     Intent intent = new Intent(Serviceprovider.this, ClientHomePage.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.nav_default_pop_enter_anim,R.anim.nav_default_pop_exit_anim);
                     finish();
                     return;
                 }
