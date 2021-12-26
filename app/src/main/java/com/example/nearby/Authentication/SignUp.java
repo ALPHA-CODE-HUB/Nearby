@@ -1,9 +1,5 @@
 package com.example.nearby.Authentication;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -19,18 +15,27 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nearby.Client.ClientHomePage;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.nearby.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class SignUp extends AppCompatActivity {
 
@@ -42,6 +47,10 @@ public class SignUp extends AppCompatActivity {
     private RadioButton male, female;
     private ProgressBar progressBar;
     private Dialog dialog;
+    FirebaseFirestore firestore;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +69,9 @@ public class SignUp extends AppCompatActivity {
         female = findViewById(R.id.female);
         progressBar = findViewById(R.id.progressbar);
         mAuth = FirebaseAuth.getInstance();
-        dialog=new Dialog(this);
+        firestore = FirebaseFirestore.getInstance();
+
+        dialog = new Dialog(this);
 
         progressBar.setVisibility(View.INVISIBLE);
         DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
@@ -96,7 +107,10 @@ public class SignUp extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 registeruser();
+
+
             }
         });
     }
@@ -108,6 +122,7 @@ public class SignUp extends AppCompatActivity {
     }
 
     private void registeruser() {
+
         String firstname = fname.getText().toString().trim();
         String lastname = lname.getText().toString().trim();
         String dateofbirth = dob.getText().toString().trim();
@@ -184,7 +199,38 @@ public class SignUp extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            UserBean User = new UserBean(firstname, lastname, e_mail, dateofbirth, phonenumber, address1, pincode, gender1,mAuth.getUid());
+                            UserBean User = new UserBean(firstname, lastname, e_mail, dateofbirth, phonenumber, address1, pincode, gender1, mAuth.getUid());
+
+
+                            CollectionReference documentReference = firestore.collection("Reviews").document(FirebaseAuth.getInstance().getUid()).collection("USER_DATA");
+
+
+                            Map<String, Object> ratingmap = new HashMap<>();
+                            ratingmap.put("list_size", (long) 0);
+
+                            List<String> documentnames = new ArrayList<>();
+                            documentnames.add("Reviews");
+
+                            List<Map<String, Object>> documentFields = new ArrayList<>();
+                            documentFields.add(ratingmap);
+
+
+                            for (int x = 0; x < documentnames.size(); x++) {
+
+                                documentReference.document(documentnames.get(x))
+                                        .set(documentFields.get(x)).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+
+                                        } else {
+                                        }
+
+                                    }
+                                });
+                            }
+
+
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(User).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -215,7 +261,7 @@ public class SignUp extends AppCompatActivity {
         dialog.setCancelable(true);
         dialog.setContentView(R.layout.dialoglayout);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        TextView okbtn=dialog.findViewById(R.id.okbtn);
+        TextView okbtn = dialog.findViewById(R.id.okbtn);
         okbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

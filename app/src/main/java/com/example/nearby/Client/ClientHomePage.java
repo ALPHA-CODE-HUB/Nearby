@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.nearby.Client.chat.chatFragment;
 import com.example.nearby.R;
 import com.example.nearby.ServiceProvider.Serviceprovider;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

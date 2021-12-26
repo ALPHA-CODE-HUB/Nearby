@@ -18,5 +18,4 @@
     <string name="Login"><u>Login</u></string>
     <string name="dialog_message">Check your mail to verify your account!</string>
     <string name="dialog_title">Email Verification</string>
-    <string name="nearby">Nearby</string>
 </resources>
