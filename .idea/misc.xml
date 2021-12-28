@@ -7,6 +7,7 @@
         <entry key="..\:/Nearby/app/src/main/res/drawable/shape2.xml" value="0.14322916666666666" />
         <entry key="..\:/Nearby/app/src/main/res/drawable/taskbar.xml" value="0.26614583333333336" />
         <entry key="..\:/Nearby/app/src/main/res/drawable/thumb.xml" value="0.1" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/activity_chatpage.xml" value="0.24583333333333332" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_client.xml" value="0.25" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_request_posting.xml" value="0.12708333333333333" />
@@ -23,6 +24,7 @@
         <entry key="..\:/Nearby/app/src/main/res/layout/fragment_sp.xml" value="0.25" />
         <entry key="..\:/Nearby/app/src/main/res/layout/grid_view_items.xml" value="0.4" />
         <entry key="..\:/Nearby/app/src/main/res/layout/request_row.xml" value="0.11979166666666667" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/user_row.xml" value="0.4" />
         <entry key="..\:/Nearby/app/src/main/res/menu/bottom_nav_menu.xml" value="0.4" />
         <entry key="..\:/Nearby/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="..\:/Nearby/app/src/main/res/menu/menu1.xml" value="0.12708333333333333" />
