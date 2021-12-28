@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Nearby/app/src/main/res/drawable/bottom_nav_color.xml" value="0.26614583333333336" />
+        <entry key="..\:/Nearby/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.13020833333333334" />
+        <entry key="..\:/Nearby/app/src/main/res/drawable/reciver_shape.xml" value="0.13020833333333334" />
+        <entry key="..\:/Nearby/app/src/main/res/drawable/sender_shape.xml" value="0.140625" />
         <entry key="..\:/Nearby/app/src/main/res/drawable/shape2.xml" value="0.14322916666666666" />
         <entry key="..\:/Nearby/app/src/main/res/drawable/taskbar.xml" value="0.26614583333333336" />
         <entry key="..\:/Nearby/app/src/main/res/drawable/thumb.xml" value="0.1" />
@@ -23,7 +26,9 @@
         <entry key="..\:/Nearby/app/src/main/res/layout/fragment_review.xml" value="0.264" />
         <entry key="..\:/Nearby/app/src/main/res/layout/fragment_sp.xml" value="0.25" />
         <entry key="..\:/Nearby/app/src/main/res/layout/grid_view_items.xml" value="0.4" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/reciver_layout.xml" value="0.12447916666666667" />
         <entry key="..\:/Nearby/app/src/main/res/layout/request_row.xml" value="0.11979166666666667" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/sender_layout.xml" value="0.12447916666666667" />
         <entry key="..\:/Nearby/app/src/main/res/layout/user_row.xml" value="0.4" />
         <entry key="..\:/Nearby/app/src/main/res/menu/bottom_nav_menu.xml" value="0.4" />
         <entry key="..\:/Nearby/app/src/main/res/menu/menu.xml" value="0.25" />
