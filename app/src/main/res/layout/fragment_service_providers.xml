@@ -6,10 +6,13 @@
     tools:context=".Client.ServiceProviders">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/serviceprovidersrv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="60dp"
-        android:layout_margin="3dp"
-        android:id="@+id/serviceprovidersrv"/>
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:paddingTop="60dp" />
 
 </RelativeLayout>

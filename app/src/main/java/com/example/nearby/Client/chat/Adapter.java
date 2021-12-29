@@ -37,7 +37,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Viewholder> {
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
 
         model user = users.get(position);
-        holder.username.setText(user.getFname());
+        String s1, s2;
+        s1 = user.getFname();
+        s2 = user.getLname();
+        holder.username.setText(s1+"  "+s2);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

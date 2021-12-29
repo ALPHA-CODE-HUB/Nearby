@@ -77,6 +77,4 @@ public class chatFragment extends Fragment {
 
         return v;
     }
-
-
 }

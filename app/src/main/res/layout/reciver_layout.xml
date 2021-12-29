@@ -11,9 +11,7 @@
         android:layout_centerVertical="true"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:src="@drawable/ic_circular_person_2_512"
-
-        />
+        android:src="@drawable/ic_circular_person_2_512" />
 
     <TextView
         android:id="@+id/txtmessages"
@@ -23,7 +21,6 @@
         android:layout_margin="5dp"
         android:layout_toRightOf="@id/profile_image3"
         android:background="@drawable/reciver_shape"
-
         android:padding="7dp"
         android:text="@string/app_name"
         android:textColor="@color/white"

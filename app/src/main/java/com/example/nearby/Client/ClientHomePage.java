@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,10 +29,13 @@ public class ClientHomePage extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     Switch s;
     private EditText pin;
+    TextView tv5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = this.getWindow();
@@ -41,7 +45,7 @@ public class ClientHomePage extends AppCompatActivity {
         }
 
 
-
+tv5=findViewById(R.id.tv4);
         s = findViewById(R.id.sw);
         s.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -76,6 +80,7 @@ public class ClientHomePage extends AppCompatActivity {
                     fragment = new categoryFragment();
                     break;
                 case R.id.chat:
+
                     fragment = new chatFragment();
                     break;
                 case R.id.account:

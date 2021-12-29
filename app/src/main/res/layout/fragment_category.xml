@@ -22,6 +22,7 @@
                     android:layout_toRightOf="@id/locationicon"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
+
                     android:textSize="15sp"
                     android:hint="Pincode"
                     android:id="@+id/pin"
@@ -33,6 +34,7 @@
             android:id="@+id/simpleGridView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_below="@id/location"
             android:layout_marginTop="17dp"
             android:numColumns="3">

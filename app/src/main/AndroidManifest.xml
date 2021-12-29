@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nearby">
         <activity
+            android:name=".Client.account.About_us"
+            android:exported="true" />
+        <activity
+            android:name=".Client.account.Privacy_policy"
+            android:exported="true" />
+        <activity
+            android:name=".Client.account.contact_us"
+            android:exported="true" />
+        <activity
             android:name=".Client.chat.chatpageActivity"
             android:exported="true" />
         <activity

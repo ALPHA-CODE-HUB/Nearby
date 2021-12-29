@@ -27,7 +27,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
-                android:text="nearby"
+                android:text="Nearby"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
@@ -81,6 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_medium"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
             android:gravity="center"
@@ -95,7 +96,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messagebox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@id/ll2"
         android:layout_below="@+id/ll1" />
 
@@ -129,7 +130,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:background="@null"
-                android:fontFamily="serif"
+                android:fontFamily="@font/poppins_medium"
+
                 android:hint="Type your Message"
                 android:paddingStart="15dp"
                 android:paddingLeft="10dp" />
@@ -144,15 +146,11 @@
             android:layout_margin="3dp"
             app:cardBackgroundColor="@color/blue"
             app:cardCornerRadius="540dp">
-
             <ImageView
-
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:background="@drawable/ic_baseline_send_24" />
-
-
         </androidx.cardview.widget.CardView>
 
 

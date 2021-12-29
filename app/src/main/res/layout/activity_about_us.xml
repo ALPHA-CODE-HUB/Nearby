@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Client.account.Privacy_policy">
+
+    <RelativeLayout
+        android:id="@+id/rl11"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/taskbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Nearby"
+                android:textColor="@color/white"
+                android:textSize="54sp" />
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/logo4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl11"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/tw1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingStart="20dp"
+                android:text="About-us"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tw1"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_margin="20dp"
+                android:text="Welcome to Nearby, your number one source for all the services we provide. We're dedicated to providing you the very best of Service to our customers.
+
+
+
+Founded in [2020] by Adithya s, Unnikannan, Rahul Gopinath, Karthic Kirshan Nearby has come a long way from its beginnings in India. When founders first started out, Their passion for Essential services drove them to start their own businesses.
+
+
+We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.
+
+
+Sincerely,
+
+ Adithya s, Unnikannan, Rahul Gopinath, Karthic Krishna"
+              />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
