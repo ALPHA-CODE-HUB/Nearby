@@ -75,9 +75,14 @@ public class chatpageActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String s1,s2;
                 model user = dataSnapshot.getValue(model.class);
-                username.setText(user.getFname());
-                readmessage(fuser.getUid(), userid);
+                s1=user.getFname().toString();
+                s2=user.getLname().toString();
+                String myid=fuser.getUid();
+
+                username.setText(s1+""+s2);
+                readmessage(myid, userid.toString());
             }
 
             @Override
@@ -109,7 +114,7 @@ public class chatpageActivity extends AppCompatActivity {
                 mchat.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     cmodel chat = snapshot.getValue(cmodel.class);
-                    if (chat.getReceiver().equals(myid) && chat.getSender().equals(userid) || chat.getReceiver().equals(userid) && chat.getSender().equals(myid)) {
+                    if (chat.getReceiver().toString().equals(myid) && chat.getSender().toString().equals(userid) || chat.getReceiver().toString().equals(userid) && chat.getSender().toString().equals(myid)) {
                         mchat.add(chat);
                     }
 

@@ -23,7 +23,7 @@ private LinearLayout rate;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
       View v=inflater.inflate(R.layout.fragment_review, container, false);
-      rate=v.findViewById(R.id.rll1);
+      /*rate=v.findViewById(R.id.rll1);
       for(int x=0;x<rate.getChildCount();x++)
       {
         final int star=x;
@@ -34,10 +34,10 @@ private LinearLayout rate;
             }
         });
 
-      }
+      }*/
       return v;
     }
-
+/*
     public void setRating(int star) {
 
 
@@ -54,6 +54,6 @@ private LinearLayout rate;
 
 
 
-    }
+    }*/
 
 }

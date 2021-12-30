@@ -15,12 +15,16 @@
         <entry key="..\:/Nearby/app/src/main/res/drawable/taskbar.xml" value="0.26614583333333336" />
         <entry key="..\:/Nearby/app/src/main/res/drawable/thumb.xml" value="0.1" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_about_us.xml" value="0.24583333333333332" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/activity_about_us2.xml" value="0.21041666666666667" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_chatpage.xml" value="0.24583333333333332" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/activity_chatpage2.xml" value="0.21041666666666667" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_client.xml" value="0.25" />
-        <entry key="..\:/Nearby/app/src/main/res/layout/activity_contact_us.xml" value="0.2" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/activity_contact_us.xml" value="0.4" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/activity_contact_us2.xml" value="0.19635416666666666" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_log_in.xml" value="0.24583333333333332" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_privacy_policy.xml" value="0.12266226622662266" />
+        <entry key="..\:/Nearby/app/src/main/res/layout/activity_privacy_policy2.xml" value="0.21041666666666667" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_request_posting.xml" value="0.12708333333333333" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_service_provide_authentication.xml" value="0.24583333333333332" />
         <entry key="..\:/Nearby/app/src/main/res/layout/activity_serviceprovider.xml" value="0.25" />

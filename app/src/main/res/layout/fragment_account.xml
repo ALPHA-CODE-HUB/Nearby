@@ -40,9 +40,10 @@
                     android:layout_marginTop="15dp">
 
                     <TextView
+                        android:id="@+id/nametv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Adithya s"
+                        android:text=""
                         android:fontFamily="@font/poppins_medium"
                         android:textSize="25dp" />
 
@@ -139,6 +140,7 @@
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/sob1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/poppins_medium"

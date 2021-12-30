@@ -6,7 +6,7 @@
     tools:context=".Client.chat.chatFragment">
 
     <TextView
-        android:id="@+id/tw4"
+        android:id="@+id/tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -20,5 +20,5 @@
         android:id="@+id/rec1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tw4" />
+        android:layout_below="@id/tv4" />
 </RelativeLayout>
